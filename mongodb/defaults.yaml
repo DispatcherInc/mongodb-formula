@@ -1,8 +1,14 @@
 mongodb:
   mongodb_package: mongodb
   mongos_package: mongos
+  mongodb_server_package: mongodb-org-server
+  mongodb_shell_package: mongodb-org-shell
+  mongodb_tools_package: mongodb-org-tools
+  mongodb_mongos_package: mongodb-org-mongos
+  version: 3.0.5
   pip: python-pip
   mongod: mongodb
+
 
   conf_path: /etc/mongodb.conf
   log_path: /var/log/mongodb

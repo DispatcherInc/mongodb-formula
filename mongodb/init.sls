@@ -16,7 +16,11 @@ mongodb_package:
     - keyserver: keyserver.ubuntu.com
 {% endif %}
   pkg.installed:
-     - name: {{ mdb.mongodb_package }}
+    - pkgs:
+      - {{ mdb.mongodb_server_package }}: {{ mdb.version }}
+      - {{ mdb.mongodb_shell_package }}: {{ mdb.version }}
+      - {{ mdb.mongodb_tools_package }}: {{ mdb.version }}
+      - {{ mdb.mongodb_mongos_package }}: {{ mdb.version }}      
 
 mongodb_db_path:
   file.directory:
